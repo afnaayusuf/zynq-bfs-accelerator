@@ -1,244 +1,486 @@
-# Zynq BFS Accelerator# Zynq BFS Accelerator# FPGA-Accelerated Breadth-First Search on Zynq-7000 SoC
+# Zynq BFS Accelerator# Zynq BFS Accelerator# Zynq BFS Accelerator# FPGA-Accelerated Breadth-First Search on Zynq-7000 SoC
 
 
 
-> **Hardware-accelerated Breadth-First Search on Xilinx Zynq-7000 SoC achieving 45x speedup over software**
+**Hardware-accelerated Breadth-First Search on Xilinx Zynq-7000 SoC achieving 45x speedup over software**
 
 
 
-[![FPGA](https://img.shields.io/badge/FPGA-Xilinx_Zynq--7000-red)](https://www.xilinx.com/)> **Hardware-accelerated Breadth-First Search graph traversal on Xilinx Zynq-7000 SoC achieving 45x speedup over software implementation**[![FPGA](https://img.shields.io/badge/FPGA-Xilinx%20Zynq--7000-red)](https://www.xilinx.com/)
+[![FPGA](https://img.shields.io/badge/FPGA-Xilinx_Zynq--7000-red)](https://www.xilinx.com/)> **Hardware-accelerated Breadth-First Search on Xilinx Zynq-7000 SoC achieving 45x speedup over software**
 
 [![HDL](https://img.shields.io/badge/HDL-Verilog--2001-blue)](https://en.wikipedia.org/wiki/Verilog)
 
-[![Platform](https://img.shields.io/badge/Platform-PYNQ--Z2-orange)](http://www.pynq.io/)[![Language](https://img.shields.io/badge/HDL-Verilog--2001-blue)](https://en.wikipedia.org/wiki/Verilog)
+[![Platform](https://img.shields.io/badge/Platform-PYNQ--Z2-orange)](http://www.pynq.io/)
 
 [![Performance](https://img.shields.io/badge/Speedup-45x-brightgreen)](#)
 
-[![FPGA](https://img.shields.io/badge/FPGA-Xilinx_Zynq--7000-red)](https://www.xilinx.com/)[![Platform](https://img.shields.io/badge/Platform-PYNQ--Z2-orange)](http://www.pynq.io/)
+[![FPGA](https://img.shields.io/badge/FPGA-Xilinx_Zynq--7000-red)](https://www.xilinx.com/)> **Hardware-accelerated Breadth-First Search graph traversal on Xilinx Zynq-7000 SoC achieving 45x speedup over software implementation**[![FPGA](https://img.shields.io/badge/FPGA-Xilinx%20Zynq--7000-red)](https://www.xilinx.com/)
 
 ---
 
-[![HDL](https://img.shields.io/badge/HDL-Verilog--2001-blue)](https://en.wikipedia.org/wiki/Verilog)[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![HDL](https://img.shields.io/badge/HDL-Verilog--2001-blue)](https://en.wikipedia.org/wiki/Verilog)
 
-## 🚀 Overview
+## Overview
 
-[![Platform](https://img.shields.io/badge/Platform-PYNQ--Z2-orange)](http://www.pynq.io/)
+[![Platform](https://img.shields.io/badge/Platform-PYNQ--Z2-orange)](http://www.pynq.io/)[![Language](https://img.shields.io/badge/HDL-Verilog--2001-blue)](https://en.wikipedia.org/wiki/Verilog)
 
-Custom RTL implementation of Breadth-First Search algorithm optimized for FPGA hardware. Features FSM-based traversal engine with AXI4 memory interface and AXI4-Lite control registers for seamless integration with ARM processor on Zynq platform.
+Custom RTL implementation of Breadth-First Search algorithm for FPGA hardware with FSM-based traversal engine, AXI4 memory interface, and AXI4-Lite control registers for seamless ARM-FPGA integration on Zynq platform.
 
-[![Performance](https://img.shields.io/badge/Speedup-45x-brightgreen)](https://github.com/yourusername/zynq-bfs-accelerator)> **Hardware-accelerated graph traversal achieving 45-55x speedup over software BFS on ARM Cortex-A9**
+[![Performance](https://img.shields.io/badge/Speedup-45x-brightgreen)](#)
 
 **Key Features:**
 
-- ⚡ **45-55x speedup** over ARM Cortex-A9 software BFS
+- 45-55x speedup over ARM Cortex-A9 software BFS[![FPGA](https://img.shields.io/badge/FPGA-Xilinx_Zynq--7000-red)](https://www.xilinx.com/)[![Platform](https://img.shields.io/badge/Platform-PYNQ--Z2-orange)](http://www.pynq.io/)
 
-- 🔧 **Pure Verilog-2001** - Full hardware control, no HLS
+- Pure Verilog-2001 design (no HLS)
 
-- 🔌 **AXI4 interfaces** - Industry-standard AMBA protocol---A complete RTL implementation of Breadth-First Search (BFS) algorithm on FPGA, featuring custom FSM-based traversal engine with AXI4 interfaces for seamless Zynq PS-PL integration.
+- AXI4 interfaces (industry-standard AMBA protocol)---
 
-- 🎯 **PYNQ-ready** - Python driver for Jupyter integration
+- PYNQ-ready Python driver
 
-- ⏱️ **11.8ms execution** for 29-node graph @ 100 MHz
-
-
-
----## 🚀 Overview---
+- 11.8ms execution for 29-node graph @ 100 MHz[![HDL](https://img.shields.io/badge/HDL-Verilog--2001-blue)](https://en.wikipedia.org/wiki/Verilog)[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 
 
-## 📊 Performance
+---## 🚀 Overview
 
 
+
+## Performance[![Platform](https://img.shields.io/badge/Platform-PYNQ--Z2-orange)](http://www.pynq.io/)
+
+
+
+| Metric | Software (ARM) | Hardware (FPGA) | Improvement |Custom RTL implementation of Breadth-First Search algorithm optimized for FPGA hardware. Features FSM-based traversal engine with AXI4 memory interface and AXI4-Lite control registers for seamless integration with ARM processor on Zynq platform.
+
+|--------|----------------|-----------------|-------------|
+
+| Execution Time | 532 ms | 11.8 ms | **45.1x faster** |[![Performance](https://img.shields.io/badge/Speedup-45x-brightgreen)](https://github.com/yourusername/zynq-bfs-accelerator)> **Hardware-accelerated graph traversal achieving 45-55x speedup over software BFS on ARM Cortex-A9**
+
+| Energy Efficiency | 798 mJ | 9.4 mJ | **84.5x better** |
+
+| Latency per Node | ~17 ms | ~0.3 ms | **56.7x reduction** |**Key Features:**
+
+
+
+*Test: 29-node social network graph, 114 edges*- ⚡ **45-55x speedup** over ARM Cortex-A9 software BFS
+
+
+
+---- 🔧 **Pure Verilog-2001** - Full hardware control, no HLS
+
+
+
+## Architecture- 🔌 **AXI4 interfaces** - Industry-standard AMBA protocol---A complete RTL implementation of Breadth-First Search (BFS) algorithm on FPGA, featuring custom FSM-based traversal engine with AXI4 interfaces for seamless Zynq PS-PL integration.
+
+
+
+### Zynq PS-PL Integration- 🎯 **PYNQ-ready** - Python driver for Jupyter integration
+
+- ARM Cortex-A9 (PS) communicates with FPGA fabric (PL) via AXI
+
+- BFS engine runs in programmable logic with direct DDR3 access- ⏱️ **11.8ms execution** for 29-node graph @ 100 MHz
+
+- Python driver controls hardware via AXI4-Lite CSR registers
+
+- Graph data transferred via DMA to 512 MB DDR3 memory
+
+
+
+### Core Components---## 🚀 Overview---
+
+- **BFS Engine** - FSM-based graph traversal controller
+
+- **Memory Interface** - AXI4 master with burst transactions
+
+- **CSR Module** - AXI4-Lite control/status registers
+
+- **Visited Manager** - Bitmap tracking for traversed nodes## 📊 Performance
+
+- **Work Queue** - FIFO-based node processing pipeline
+
+
+
+**FSM States:** IDLE → INIT → FETCH → PROCESS → UPDATE → DONE
 
 | Metric | Software (ARM) | Hardware (FPGA) | **Improvement** |Custom RTL implementation of Breadth-First Search algorithm optimized for FPGA hardware. Features FSM-based traversal engine with AXI4 memory interface and AXI4-Lite control registers for seamless integration with ARM processor on Zynq platform.## 🎯 Project Overview
 
+---
+
 |--------|----------------|-----------------|-----------------|
+
+## Repository Structure
 
 | **Execution Time** | 532 ms | 11.8 ms | **45.1x faster** |
 
-| **Energy Efficiency** | 798 mJ | 9.4 mJ | **84.5x better** |
+```
 
-| **Latency per Node** | ~17 ms | ~0.3 ms | **56.7x reduction** |**Key Features:**This project implements a high-performance BFS accelerator in hardware, designed for the PYNQ-Z2 board (Xilinx Zynq-7000 SoC). The accelerator features:
+zynq-bfs-accelerator/| **Energy Efficiency** | 798 mJ | 9.4 mJ | **84.5x better** |
 
-| **Clock Frequency** | 1.2 GHz | 100 MHz | - |
+├── rtl/              # RTL source code
 
-- ⚡ **45-55x speedup** over ARM Cortex-A9 software BFS
+│   ├── top/          # Top-level wrappers| **Latency per Node** | ~17 ms | ~0.3 ms | **56.7x reduction** |**Key Features:**This project implements a high-performance BFS accelerator in hardware, designed for the PYNQ-Z2 board (Xilinx Zynq-7000 SoC). The accelerator features:
 
-*Test: 29-node social network graph, 114 edges*
+│   ├── control/      # CSR registers
 
-- 🔧 **Pure Verilog-2001** - Full hardware control, no HLS- **Pure Verilog-2001 RTL design** - No high-level synthesis, full hardware control
+│   ├── memory/       # Memory controllers| **Clock Frequency** | 1.2 GHz | 100 MHz | - |
 
----
+│   ├── buffers/      # FIFO management
+
+│   └── packages/     # Parameters- ⚡ **45-55x speedup** over ARM Cortex-A9 software BFS
+
+├── tb/               # Testbenches
+
+├── sim/              # Simulation scripts*Test: 29-node social network graph, 114 edges*
+
+│   ├── iverilog/     # Icarus Verilog
+
+│   └── modelsim/     # ModelSim- 🔧 **Pure Verilog-2001** - Full hardware control, no HLS- **Pure Verilog-2001 RTL design** - No high-level synthesis, full hardware control
+
+├── synthesis/        # Vivado synthesis
+
+└── test_data/        # Example graphs---
+
+```
 
 - 🔌 **AXI4 interfaces** - Industry-standard AMBA protocol- **AXI4-Lite CSR interface** - Standard ARM AMBA protocol for control/status
 
+---
+
 ## 🏗️ Architecture
+
+## FPGA Resource Utilization
 
 - 🎯 **PYNQ-ready** - Python driver for Jupyter integration- **AXI4 Master interface** - High-bandwidth DDR3 memory access with burst transactions
 
+**Target Device:** Xilinx Zynq XC7Z020-1CLG400C (PYNQ-Z2)
+
 **Zynq PS-PL Integration:**
 
-- ARM Cortex-A9 (PS) communicates with FPGA fabric (PL) via AXI interfaces- ⏱️ **11.8ms execution** for 29-node graph @ 100 MHz- **FSM-based traversal engine** - Hardware queue management and visited bitmap
+| Resource | Used | Available | Utilization |
 
-- BFS engine runs in programmable logic with direct DDR3 access
+|----------|------|-----------|-------------|- ARM Cortex-A9 (PS) communicates with FPGA fabric (PL) via AXI interfaces- ⏱️ **11.8ms execution** for 29-node graph @ 100 MHz- **FSM-based traversal engine** - Hardware queue management and visited bitmap
 
-- Python driver controls hardware through AXI4-Lite CSR registers- **Python PYNQ driver** - Easy integration with Jupyter notebooks
+| LUTs | 8,500 | 53,200 | 16% |
 
-- Graph data transferred via DMA to 512 MB DDR3 memory
+| Flip-Flops | 12,000 | 106,400 | 11% |- BFS engine runs in programmable logic with direct DDR3 access
+
+| BRAM | 10 | 140 | 7% |
+
+| DSPs | 0 | 220 | 0% |- Python driver controls hardware through AXI4-Lite CSR registers- **Python PYNQ driver** - Easy integration with Jupyter notebooks
+
+
+
+- Clock: 100 MHz (FCLK_CLK0)- Graph data transferred via DMA to 512 MB DDR3 memory
+
+- Power: ~120 mW dynamic
+
+---
 
 ---
 
 **Core Components:**
 
+## Quick Start
+
 - **BFS Engine** - FSM-based graph traversal controller  ### 📊 Performance Results
 
-- **Memory Interface** - AXI4 master with burst transactions  
+### 1. Run Simulation
 
-- **CSR Module** - AXI4-Lite control/status registers  ## 📊 Performance
+```bash- **Memory Interface** - AXI4 master with burst transactions  
 
-- **Visited Manager** - Bitmap tracking for traversed nodes  
+cd sim/iverilog
 
-- **Work Queue** - FIFO-based node processing pipeline| Metric | Software (ARM) | Hardware (FPGA) | Speedup |
+./run_bfs_iverilog_sim.ps1- **CSR Module** - AXI4-Lite control/status registers  ## 📊 Performance
 
+gtkwave bfs_system_complete.vcd
 
-
-**FSM States:** `IDLE → INIT → FETCH → PROCESS → UPDATE → DONE`| Metric | Software (ARM) | Hardware (FPGA) | **Improvement** ||--------|---------------|-----------------|---------|
-
-
-
----|--------|----------------|-----------------|-----------------|| **Execution Time** | 532ms | 11.8ms | **45.1x** |
+```- **Visited Manager** - Bitmap tracking for traversed nodes  
 
 
 
-## 📁 Repository Structure| **Execution Time** | 532 ms | 11.8 ms | **45.1x faster** || **Clock Frequency** | 1.2 GHz | 100 MHz | - |
-
-
-
-```| **Energy Efficiency** | 798 mJ | 9.4 mJ | **84.5x better** || **Energy per BFS** | 798 mJ | 9.4 mJ | **84.5x** |
-
-zynq-bfs-accelerator/
-
-├── rtl/                    # RTL source code| **Latency per Node** | ~17 ms | ~0.3 ms | **56.7x reduction** || **Latency/Node** | ~17 ms | ~0.3 ms | **56.7x** |
-
-│   ├── top/                # Top-level wrappers
-
-│   ├── control/            # CSR registers| **Clock Frequency** | 1.2 GHz | 100 MHz | - |
-
-│   ├── memory/             # Memory controllers
-
-│   ├── buffers/            # FIFO management**Test graph:** 29 nodes, 114 edges (social network topology)
-
-│   └── packages/           # Parameters
-
-├── tb/                     # Testbenches*Test configuration: 29-node social network graph, 114 edges*
-
-├── sim/                    # Simulation scripts
-
-│   ├── iverilog/           # Icarus Verilog---
-
-│   └── modelsim/           # ModelSim
-
-├── synthesis/              # Vivado synthesis---
-
-└── test_data/              # Example graphs
-
-```## 🚀 Quick Start
-
-
-
----## 🏗️ Architecture
-
-
-
-## 🔧 FPGA Resource Utilization### Prerequisites
-
-
-
-**Target Device:** Xilinx Zynq XC7Z020-1CLG400C (PYNQ-Z2)```
-
-
-
-| Resource | Used | Available | Utilization |┌─────────────────────────────────────────────────┐- **Hardware:** PYNQ-Z2 board (or Zynq-7000 compatible FPGA)
-
-|----------|------|-----------|-------------|
-
-| **LUTs** | 8,500 | 53,200 | 16% |│              Zynq-7000 SoC                      │- **Software:** 
-
-| **Flip-Flops** | 12,000 | 106,400 | 11% |
-
-| **BRAM** | 10 | 140 | 7% |│  ┌──────────────┐         ┌─────────────────┐  │  - Xilinx Vivado 2020.2+ (for FPGA synthesis)
-
-| **DSPs** | 0 | 220 | 0% |
-
-│  │ ARM Cortex-A9│         │ FPGA Fabric     │  │  - Icarus Verilog or ModelSim (for simulation)
-
-- **Clock:** 100 MHz (FCLK_CLK0)  
-
-- **Power:** ~120 mW dynamic│  │  (PS)        │         │  (PL)           │  │  - Python 3.6+ with PYNQ framework (for deployment)
-
-
-
----│  │              │ AXI4-   │  ┌───────────┐  │  │
-
-
-
-## 🚀 Quick Start│  │  Python      │  Lite   │  │ BFS Engine│  │  │### Run Simulation in 2 Minutes
-
-
-
-### **1. Run Simulation**│  │  Driver  ────┼────────►│  │  - FSM    │  │  │
+### 2. Synthesize for PYNQ-Z2- **Work Queue** - FIFO-based node processing pipeline| Metric | Software (ARM) | Hardware (FPGA) | Speedup |
 
 ```bash
 
-cd sim/iverilog│  │              │  CSR    │  │  - Queue  │  │  │```powershell
-
-./run_bfs_iverilog_sim.ps1
-
-gtkwave bfs_system_complete.vcd│  │              │         │  │  - Visited│  │  │# Clone the repository
+vivado -mode batch -source synthesis/synthesis.tcl
 
 ```
 
-│  │  DDR3    ◄───┼─────────┼──┤  Memory   │  │  │git clone https://github.com/yourusername/fpga-bfs-accelerator.git
+**FSM States:** `IDLE → INIT → FETCH → PROCESS → UPDATE → DONE`| Metric | Software (ARM) | Hardware (FPGA) | **Improvement** ||--------|---------------|-----------------|---------|
 
-### **2. Synthesize for PYNQ-Z2**
-
-```bash│  │  512 MB      │  AXI4   │  └───────────┘  │  │cd fpga-bfs-accelerator
-
-vivado -mode batch -source synthesis/synthesis.tcl
-
-```│  └──────────────┘         └─────────────────┘  │
-
-
-
-### **3. Deploy to Hardware**└─────────────────────────────────────────────────┘# Run Icarus Verilog simulation
+### 3. Deploy to Hardware
 
 ```python
 
-from pynq import Overlay```cd sim/iverilog
+from pynq import Overlay
 
-overlay = Overlay('bfs_system_wrapper.bit')
+overlay = Overlay('bfs_system_wrapper.bit')---|--------|----------------|-----------------|-----------------|| **Execution Time** | 532ms | 11.8ms | **45.1x** |
 
-./run_bfs_iverilog_sim.ps1
-
-# Initialize and run BFS
-
-# (See Python driver documentation for full API)**Core Components:**
+# See documentation for full API
 
 ```
 
-- **BFS Engine** - FSM-based graph traversal controller# View waveforms in GTKWave
+
+
+---## 📁 Repository Structure| **Execution Time** | 532 ms | 11.8 ms | **45.1x faster** || **Clock Frequency** | 1.2 GHz | 100 MHz | - |
+
+
+
+## Technical Specifications
+
+
+
+### AXI Interfaces```| **Energy Efficiency** | 798 mJ | 9.4 mJ | **84.5x better** || **Energy per BFS** | 798 mJ | 9.4 mJ | **84.5x** |
+
+- **S_AXI_LITE:** 32-bit addr, 32-bit data (CSR control)
+
+- **M_AXI:** 32-bit addr, 64-bit data (DDR3 access)zynq-bfs-accelerator/
+
+- **Base Address:** 0x43C00000
+
+- **Address Space:** 64 KB├── rtl/                    # RTL source code| **Latency per Node** | ~17 ms | ~0.3 ms | **56.7x reduction** || **Latency/Node** | ~17 ms | ~0.3 ms | **56.7x** |
+
+
+
+### Memory Format│   ├── top/                # Top-level wrappers
+
+Each graph node occupies 128 bytes (32 words):
+
+- Word 0: Neighbor count (max 31)│   ├── control/            # CSR registers| **Clock Frequency** | 1.2 GHz | 100 MHz | - |
+
+- Word 1-31: Neighbor node IDs
+
+│   ├── memory/             # Memory controllers
+
+### Design Constraints
+
+- Max Nodes: 1024 (configurable)│   ├── buffers/            # FIFO management**Test graph:** 29 nodes, 114 edges (social network topology)
+
+- Max Edges per Node: 31
+
+- Memory Bandwidth: 800 MB/s @ 100 MHz│   └── packages/           # Parameters
+
+- Latency: ~300 ns per node access
+
+├── tb/                     # Testbenches*Test configuration: 29-node social network graph, 114 edges*
 
 ---
 
-- **Memory Interface** - AXI4 master with burst transactionsgtkwave bfs_system_complete.vcd
+├── sim/                    # Simulation scripts
 
-## 🎯 Technical Specifications
+## Tools Required
 
-- **CSR Module** - AXI4-Lite control/status registers```
+│   ├── iverilog/           # Icarus Verilog---
 
-### **AXI Interfaces**
+**Hardware:**
 
-- **S_AXI_LITE:** 32-bit addr, 32-bit data (CSR control)- **Visited Manager** - Bitmap tracking for traversed nodes
+- PYNQ-Z2 board (or Zynq-7000 compatible FPGA)│   └── modelsim/           # ModelSim
+
+
+
+**Software:**├── synthesis/              # Vivado synthesis---
+
+- Xilinx Vivado 2020.2+ (synthesis)
+
+- Icarus Verilog or ModelSim (simulation)└── test_data/              # Example graphs
+
+- Python 3.6+ with PYNQ framework (deployment)
+
+- GTKWave (waveform viewing)```## 🚀 Quick Start
+
+
+
+---
+
+
+
+## Design Highlights---## 🏗️ Architecture
+
+
+
+### BFS Algorithm Implementation
+
+- Queue-based FSM for level-order traversal
+
+- Parallel neighbor fetching via AXI burst reads## 🔧 FPGA Resource Utilization### Prerequisites
+
+- Hardware visited bitmap (1 bit per node)
+
+- Pipeline design for continuous node processing
+
+
+
+### AXI4 Optimization**Target Device:** Xilinx Zynq XC7Z020-1CLG400C (PYNQ-Z2)```
+
+- Burst length: 16 beats
+
+- Outstanding transactions: 4
+
+- Pipelined read/write operations
+
+- Automatic retry on SLVERR| Resource | Used | Available | Utilization |┌─────────────────────────────────────────────────┐- **Hardware:** PYNQ-Z2 board (or Zynq-7000 compatible FPGA)
+
+
+
+### Performance Features|----------|------|-----------|-------------|
+
+- Zero-cycle visited check (bitmap)
+
+- Prefetch buffer for neighbor data| **LUTs** | 8,500 | 53,200 | 16% |│              Zynq-7000 SoC                      │- **Software:** 
+
+- Work queue with dual-port BRAM
+
+- Interrupt-driven completion signaling| **Flip-Flops** | 12,000 | 106,400 | 11% |
+
+
+
+---| **BRAM** | 10 | 140 | 7% |│  ┌──────────────┐         ┌─────────────────┐  │  - Xilinx Vivado 2020.2+ (for FPGA synthesis)
+
+
+
+## Academic Context| **DSPs** | 0 | 220 | 0% |
+
+
+
+**Project:** Final Year ECE Department Project  │  │ ARM Cortex-A9│         │ FPGA Fabric     │  │  - Icarus Verilog or ModelSim (for simulation)
+
+**Institution:** SRM University
+
+- **Clock:** 100 MHz (FCLK_CLK0)  
+
+**Team:**
+
+- **Mentor:** Roji Ma'am- **Power:** ~120 mW dynamic│  │  (PS)        │         │  (PL)           │  │  - Python 3.6+ with PYNQ framework (for deployment)
+
+- **Students:** Karthikeya, Akarsh, Afnaa Yusuf
+
+
+
+**Objective:** Explore hardware acceleration techniques for graph algorithms, demonstrating PS-PL co-design methodology on Zynq platform with emphasis on AXI protocol implementation and memory optimization.
+
+---│  │              │ AXI4-   │  ┌───────────┐  │  │
+
+---
+
+
+
+## Key Learnings
+
+## 🚀 Quick Start│  │  Python      │  Lite   │  │ BFS Engine│  │  │### Run Simulation in 2 Minutes
+
+- **RTL Design:** FSM implementation, AXI protocol, memory controller design
+
+- **Verification:** Testbench development, waveform debugging, coverage analysis
+
+- **Integration:** PS-PL interfaces, DMA configuration, interrupt handling
+
+- **Optimization:** Pipeline design, resource sharing, timing closure### **1. Run Simulation**│  │  Driver  ────┼────────►│  │  - FSM    │  │  │
+
+- **Deployment:** Bitstream generation, Python driver, hardware validation
+
+```bash
+
+---
+
+cd sim/iverilog│  │              │  CSR    │  │  - Queue  │  │  │```powershell
+
+## Performance Analysis
+
+./run_bfs_iverilog_sim.ps1
+
+### Speedup Breakdown
+
+- Memory access: 8x faster (parallel AXI vs sequential CPU)gtkwave bfs_system_complete.vcd│  │              │         │  │  - Visited│  │  │# Clone the repository
+
+- Visited check: 20x faster (hardware bitmap vs software hash)
+
+- Queue operations: 5x faster (BRAM FIFO vs DRAM)```
+
+- Overall pipeline: 45-55x combined improvement
+
+│  │  DDR3    ◄───┼─────────┼──┤  Memory   │  │  │git clone https://github.com/yourusername/fpga-bfs-accelerator.git
+
+### Energy Efficiency
+
+- FPGA: 0.8W @ 100 MHz### **2. Synthesize for PYNQ-Z2**
+
+- ARM: 1.5W @ 1.2 GHz
+
+- Energy per BFS: 84x improvement due to lower power and faster execution```bash│  │  512 MB      │  AXI4   │  └───────────┘  │  │cd fpga-bfs-accelerator
+
+
+
+---vivado -mode batch -source synthesis/synthesis.tcl
+
+
+
+## License```│  └──────────────┘         └─────────────────┘  │
+
+
+
+MIT License - See [LICENSE](LICENSE) file for details
+
+
+
+---### **3. Deploy to Hardware**└─────────────────────────────────────────────────┘# Run Icarus Verilog simulation
+
+
+
+## Acknowledgments```python
+
+
+
+- **Roji Ma'am** - Project guidance and mentorshipfrom pynq import Overlay```cd sim/iverilog
+
+- **SRM University ECE Department** - Resources and support
+
+- **Xilinx/AMD** - PYNQ framework and development toolsoverlay = Overlay('bfs_system_wrapper.bit')
+
+- **Open-source community** - Icarus Verilog and GTKWave
+
+./run_bfs_iverilog_sim.ps1
+
+---
+
+# Initialize and run BFS
+
+## Contact
+
+# (See Python driver documentation for full API)**Core Components:**
+
+**GitHub:** [@afnaayusuf](https://github.com/afnaayusuf)  
+
+**Repository:** [zynq-bfs-accelerator](https://github.com/afnaayusuf/zynq-bfs-accelerator)```
+
+
+
+---- **BFS Engine** - FSM-based graph traversal controller# View waveforms in GTKWave
+
+
+
+**If you find this project useful for learning FPGA design or graph algorithms, please consider giving it a star!** ⭐---
+
+
+
+---- **Memory Interface** - AXI4 master with burst transactionsgtkwave bfs_system_complete.vcd
+
+
+
+<p align="center">## 🎯 Technical Specifications
+
+  <b>Built with ❤️ for hardware acceleration and graph processing</b>
+
+</p>- **CSR Module** - AXI4-Lite control/status registers```
+
+
+
+<p align="center">### **AXI Interfaces**
+
+  <img src="https://img.shields.io/github/stars/afnaayusuf/zynq-bfs-accelerator?style=social" alt="Stars">
+
+  <img src="https://img.shields.io/github/forks/afnaayusuf/zynq-bfs-accelerator?style=social" alt="Forks">- **S_AXI_LITE:** 32-bit addr, 32-bit data (CSR control)- **Visited Manager** - Bitmap tracking for traversed nodes
+
+</p>
 
 - **M_AXI:** 32-bit addr, 64-bit data (DDR3 access)
 
