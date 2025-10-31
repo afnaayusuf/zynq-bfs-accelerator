@@ -1,0 +1,52 @@
+// Simple Graph Memory Format for BFS Engine
+// ==========================================
+// Memory format: Each node occupies 32 words (128 bytes)
+//   Word 0: Number of neighbors (max 31)
+//   Word 1-31: Neighbor node IDs
+//
+// Example structure for a 5-node graph:
+//
+// Node 0: Connected to nodes 1, 2
+// Node 1: Connected to nodes 0, 3
+// Node 2: Connected to nodes 0, 3, 4
+// Node 3: Connected to nodes 1, 2
+// Node 4: Connected to node 2
+
+// Node 0 @ address 0x0000 (neighbors: 1, 2)
+@0000 00000002  // 2 neighbors
+@0001 00000001  // neighbor: node 1
+@0002 00000002  // neighbor: node 2
+@0003 00000000  // (unused)
+@0004 00000000
+// ... remaining words unused (up to @001F)
+
+// Node 1 @ address 0x0020 (neighbors: 0, 3)
+@0020 00000002  // 2 neighbors
+@0021 00000000  // neighbor: node 0
+@0022 00000003  // neighbor: node 3
+@0023 00000000  // (unused)
+// ... remaining words unused
+
+// Node 2 @ address 0x0040 (neighbors: 0, 3, 4)
+@0040 00000003  // 3 neighbors
+@0041 00000000  // neighbor: node 0
+@0042 00000003  // neighbor: node 3
+@0043 00000004  // neighbor: node 4
+@0044 00000000  // (unused)
+// ... remaining words unused
+
+// Node 3 @ address 0x0060 (neighbors: 1, 2)
+@0060 00000002  // 2 neighbors
+@0061 00000001  // neighbor: node 1
+@0062 00000002  // neighbor: node 2
+@0063 00000000  // (unused)
+// ... remaining words unused
+
+// Node 4 @ address 0x0080 (neighbors: 2)
+@0080 00000001  // 1 neighbor
+@0081 00000002  // neighbor: node 2
+@0082 00000000  // (unused)
+// ... remaining words unused
+
+// Add more nodes following the same pattern
+// Each node starts at address (node_id * 0x20)

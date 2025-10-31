@@ -1,0 +1,80 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Fri Nov 01 00:00:00 2025
+[*]
+[dumpfile] "bfs_system_complete.vcd"
+[savefile] "bfs_system_complete.gtkw"
+[timestart] 0
+[size] 1920 1080
+[pos] -1 -1
+*-18.000000 1000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] bfs_system_complete_tb.
+[treeopen] bfs_system_complete_tb.dut.
+[sst_width] 300
+[signals_width] 350
+[sst_expanded] 1
+[sst_vpaned_height] 350
+
+@28
+# System Clocks and Reset
+bfs_system_complete_tb.aclk
+bfs_system_complete_tb.aresetn
+@200
+-
+@28
+# AXI-Lite Control Interface
+@22
+bfs_system_complete_tb.s_axi_awaddr[11:0]
+bfs_system_complete_tb.s_axi_wdata[31:0]
+@28
+bfs_system_complete_tb.s_axi_awvalid
+bfs_system_complete_tb.s_axi_awready
+bfs_system_complete_tb.s_axi_wvalid
+bfs_system_complete_tb.s_axi_wready
+bfs_system_complete_tb.s_axi_bvalid
+bfs_system_complete_tb.s_axi_bready
+@200
+-
+@28
+# AXI-Lite Read Interface
+@22
+bfs_system_complete_tb.s_axi_araddr[11:0]
+bfs_system_complete_tb.s_axi_rdata[31:0]
+@28
+bfs_system_complete_tb.s_axi_arvalid
+bfs_system_complete_tb.s_axi_arready
+bfs_system_complete_tb.s_axi_rvalid
+bfs_system_complete_tb.s_axi_rready
+@200
+-
+@28
+# AXI4 Memory Interface
+@22
+bfs_system_complete_tb.m_axi_araddr[31:0]
+bfs_system_complete_tb.m_axi_arlen[7:0]
+@28
+bfs_system_complete_tb.m_axi_arvalid
+bfs_system_complete_tb.m_axi_arready
+@22
+bfs_system_complete_tb.m_axi_rdata[63:0]
+@28
+bfs_system_complete_tb.m_axi_rvalid
+bfs_system_complete_tb.m_axi_rready
+bfs_system_complete_tb.m_axi_rlast
+@200
+-
+@28
+# BFS Status Signals
+bfs_system_complete_tb.interrupt
+@200
+-
+@28
+# Internal DUT Signals (if available)
+# Uncomment and adjust paths based on your design hierarchy
+# bfs_system_complete_tb.dut.main_engine.current_state[3:0]
+# bfs_system_complete_tb.dut.main_engine.nodes_processed[31:0]
+# bfs_system_complete_tb.dut.main_engine.current_level[15:0]
+@200
+-
+[pattern_trace] 1
+[pattern_trace] 0

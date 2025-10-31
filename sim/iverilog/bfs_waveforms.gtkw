@@ -1,0 +1,77 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] 
+[dumpfile] "bfs_system_complete.vcd"
+[savefile] "bfs_waveforms.gtkw"
+[timestart] 0
+[size] 1920 1080
+[pos] -1 -1
+
+*-25.0 100000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+
+[sst_width] 300
+[signals_width] 250
+[sst_expanded] 1
+[sst_vpaned] 200
+
+@28
+bfs_system_complete_tb.aclk
+bfs_system_complete_tb.aresetn
+@200
+-
+@28
+bfs_system_complete_tb.state_name[127:0]
+@22
+bfs_system_complete_tb.bfs_state_internal[3:0]
+@28
+bfs_system_complete_tb.bfs_busy_internal
+bfs_system_complete_tb.bfs_done_internal
+bfs_system_complete_tb.interrupt
+@200
+-
+@22
+bfs_system_complete_tb.current_node_id[31:0]
+bfs_system_complete_tb.nodes_visited_internal[31:0]
+bfs_system_complete_tb.edges_scanned_internal[31:0]
+bfs_system_complete_tb.current_level_internal[31:0]
+bfs_system_complete_tb.bfs_progress_percent[7:0]
+@200
+-
+@28
+bfs_system_complete_tb.node_visited_event
+bfs_system_complete_tb.edge_processed
+bfs_system_complete_tb.level_changed
+bfs_system_complete_tb.incr_edge_pulse
+@200
+-
+@28
+bfs_system_complete_tb.axi_write_active
+bfs_system_complete_tb.axi_read_active
+bfs_system_complete_tb.mem_read_active
+@200
+-
+@22
+bfs_system_complete_tb.s_axi_awaddr[11:0]
+@28
+bfs_system_complete_tb.s_axi_awvalid
+@22
+bfs_system_complete_tb.s_axi_wdata[31:0]
+bfs_system_complete_tb.s_axi_araddr[11:0]
+@28
+bfs_system_complete_tb.s_axi_arvalid
+@22
+bfs_system_complete_tb.s_axi_rdata[31:0]
+@28
+bfs_system_complete_tb.status_busy
+bfs_system_complete_tb.status_done
+@200
+-
+@22
+bfs_system_complete_tb.dut.sim_counter[31:0]
+bfs_system_complete_tb.dut.edges_to_add[31:0]
+@28
+bfs_system_complete_tb.dut.start_bfs
+bfs_system_complete_tb.dut.start_bfs_edge
+
+[pattern_trace] 1
+[pattern_trace] 0

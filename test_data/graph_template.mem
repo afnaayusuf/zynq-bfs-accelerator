@@ -1,0 +1,23 @@
+// Graph Memory Template
+// ======================
+// Use this template to create your own graph data
+//
+// Format: @address data  // comment
+//
+// Each node uses 32 words (0x20 addresses):
+//   - First word: neighbor count
+//   - Next words: neighbor IDs
+//   - Remaining words: padding (zeros)
+//
+// Node addresses:
+//   Node 0: 0x0000 - 0x001F
+//   Node 1: 0x0020 - 0x003F
+//   Node 2: 0x0040 - 0x005F
+//   Node N: (N * 0x20) to (N * 0x20 + 0x1F)
+
+// TODO: Add your graph nodes here
+// Example:
+//
+// @0000 00000002  // Node 0: 2 neighbors
+// @0001 00000001  // neighbor 1
+// @0002 00000002  // neighbor 2
